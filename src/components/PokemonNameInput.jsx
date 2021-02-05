@@ -5,11 +5,11 @@ import {fetchPokemon} from "../fetchers/pokemonApi";
 export default function NameInput()
 {
     const [input, setInput] = useState('');
-    const {dispatch} = usePokemonContext();
+    const {setOtherPokemon} = usePokemonContext();
 
     return (
         <input
-            onKeyDown={e => e.key === 'Enter' && fetchPokemon(input, dispatch)}
+            onKeyDown={e => e.key === 'Enter' && fetchPokemon(input, setOtherPokemon)}
             onChange={e => setInput(e.target.value)}
         />
     )

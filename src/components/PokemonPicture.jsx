@@ -2,7 +2,7 @@ import {usePokemonContext} from '../context/PokemonContext'
 
 export default function PokemonPicture()
 {
-    const {pokemon} = usePokemonContext();
+    const {otherPokemon} = usePokemonContext();
 
-    return <img alt="pokemonFigure" src={pokemon.picture}/>
+    return <img alt="pokemonFigure" src={otherPokemon.picture}/>
 }
